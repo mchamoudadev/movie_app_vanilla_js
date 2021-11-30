@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="modal-container hide">
+        <div class="modal">
+            <span class="close">&times;</span>
+           <div class="modal-info">
+            <h1 class="movie-title">Movie title</h1>
+            <p class="movie-detail">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam mollitia eveniet molestias deserunt illo, architecto similique expedita nemo cupiditate magni facere debitis? Harum expedita, nisi asperiores blanditiis ipsum fugit reprehenderit?</p>
+           </div>
+        </div>
+    </div>
+
+    <header class="container">
+        <ul>
+            <li>
+                <a class="logo" href="#">Som <span class="logo-primary">Movies</span>   </a>
+            </li>
+            <li>
+                <a href="#">Watch Now</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1 class="title">Most Popular Movies</h1>
+        <div class="movie-container most-popular">
+            <div class="movie">
+                <input type="hidden" value="">
+                <img class="movie-image" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="">
+               <div class="info">
+                <span class="movie-title">Movie Title</span>
+                
+                   <div class="counts">
+                    <div class="vote-average">
+                        <span>Vote average</span>
+                    </div>
+                    <div class="release-date">
+                        <span>2021-01-20</span>
+                    </div>
+                   
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script src="./main.js"></script>
+</body>
+</html>

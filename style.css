@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background:   linear-gradient(rgba(21, 20, 72, 0.926), rgba(27, 13, 89, 0.96))
+    ,url('https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg');;
+    
+    /* background: url('https://image.tmdb.org/t/p/w500/jKuDyqx7jrjiR9cDzB5pxzhJAdv.jpg') no-repeat full/cover,#21 1044; */
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    max-width: 996px;
+    margin: 0 auto;
+}
+
+header ul {
+    height: 78px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+header ul li {
+    list-style: none; 
+    margin-top: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+   
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.logo-primary {
+    color: #03c213;
+}
+
+.title {
+    color: #fff;
+    margin: 2rem 0px;
+}
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    /* padding: 1rem; */
+}
+
+.movie-container .movie{
+    position: relative;
+    width: 320px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: #41317a;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+.movie-container .movie img {
+    max-height: 400px;
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    display: block;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: top;
+    cursor: pointer;
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.counts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie-container .movie .movie-title {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 20px 10px;
+}
+
+
+.vote-average {
+    background-color: #2da515;
+    border-radius: 50%;
+    padding: 10px;
+    color: #fff;
+}
+.release-date {
+    background-color: #2da515;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #41317ae2;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    position: relative;
+    width: 60vw;
+    height: 40vh;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    z-index: 1111;
+    
+}
+
+.modal-info {
+    position: relative;
+    top: 15%;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.modal-info h1  {
+    margin: 1rem 0;
+}
+
+.close {
+    position: absolute;
+    right: 5%;
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+
+.modal-container.show {
+    display: flex;
+}
+.modal-container.hide {
+   display: none;
+}
+
+@media only screen and (max-width : 600px){
+    .movie-container {
+        grid-template-columns: 1fr;
+    }
+}
+@media only screen and (min-width : 600px){
+    .movie-container {
+        grid-template-columns: 2fr 2fr;
+    }
+}
+@media only screen and (min-width : 768px){
+    .movie-container {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {...} */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */
